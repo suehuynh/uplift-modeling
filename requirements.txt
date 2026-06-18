@@ -1,0 +1,10 @@
+numpy>=1.26
+pandas>=2.2
+scikit-learn>=1.4
+econml>=0.15
+matplotlib>=3.8
+seaborn>=0.13
+pytest>=8.0
+pytest-cov>=5.0
+wandb>=0.17
+datasets==5.0.0
