@@ -7,7 +7,7 @@ class Config:
     from pathlib import Path
     data_dir: Path = Path(__file__).parent.parent / "processed"
     models_dir: Path = Path(__file__).parent.parent / "trained_models"
-    results_dir: Path = Path(__file__).parent.parent / "results"
+    results_dir: Path = Path(__file__).parent / "results"
 
     subsample_size: int = 2000000
     test_size: float = 0.2
