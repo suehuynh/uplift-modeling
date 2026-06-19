@@ -1,2 +1,8 @@
+__pycache__/
+*.pyc
+*.egg-info/
+processed/
+trained_models/
+.ipynb_checkpoints/
+.venv/
 .pytest_cache
-.venv
