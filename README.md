@@ -45,6 +45,8 @@ uplift-modeling/
 │   │   └── causal_forest.py
 │   └── evaluation/
 │       └── evaluator.py        # Qini curve, AUUC, comparison plots
+├── results/
+│   ├── results.png
 ├── notebooks/
 │   ├── 01_eda.ipynb
 │   ├── 02_preprocessing.ipynb
