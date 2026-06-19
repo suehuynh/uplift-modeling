@@ -19,12 +19,25 @@ class CausalForest(UpliftModel):
         self.cfg = Config()
         super().__init__(name, self.cfg.random_state)
         self.model = CausalForestDML(
-            model_y=RandomForestClassifier(random_state=self.cfg.random_state, n_estimators=50),
-            model_t=RandomForestClassifier(random_state=self.cfg.random_state, n_estimators=50),
+            model_y=RandomForestClassifier(
+                random_state=self.cfg.random_state,
+                n_estimators=48,
+                max_depth=10,
+                n_jobs=2,
+            ),
+            model_t=RandomForestClassifier(
+                random_state=self.cfg.random_state,
+                n_estimators=48,
+                max_depth=10,
+                n_jobs=2,
+            ),
             random_state=self.cfg.random_state,
-            n_estimators=50,
+            n_estimators=48,
+            max_depth=10,
+            min_samples_leaf=450,
+            n_jobs=2,
             discrete_outcome=True,
-            discrete_treatment=True
+            discrete_treatment=True,
         )
     
     def fit(
@@ -71,5 +84,4 @@ class CausalForest(UpliftModel):
             Estimated uplift for each unit. Higher = more responsive to treatment.
         """
         self._check_is_fitted()
-        return self.model.effect(X)
-
+        return self.model.effect(X).flatten()
