@@ -6,6 +6,8 @@ class Config:
     data_path: str = "criteo/criteo-uplift"
     from pathlib import Path
     data_dir: Path = Path(__file__).parent.parent / "processed"
+    models_dir: Path = Path(__file__).parent.parent / "trained_models"
+    results_dir: Path = Path(__file__).parent.parent / "results"
 
     subsample_size: int = 2000000
     test_size: float = 0.2
