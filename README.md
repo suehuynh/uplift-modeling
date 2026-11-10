@@ -1,6 +1,6 @@
 # Uplift Modeling: Budget-Constrained Targeting on Criteo
 
-> This project designs targeting policies that maximize incremental impact, not just predicted conversion.
+> This project designs targeting policies that maximize incremental impact.
 
 ## Executive Briefing: CATE-Driven Budget Allocation
 
@@ -10,7 +10,7 @@
 
 ## Overview
 
-An end-to-end uplift modeling pipeline built on the Criteo Uplift dataset (~25M rows), estimating heterogeneous treatment effects to inform budget-constrained marketing targeting decisions. Rather than predicting who is most likely to convert, this project identifies who is most likely to convert *because* of treatment, the "persuadables" segment that drives incremental value from a marketing intervention.
+An uplift modeling pipeline built on the Criteo Uplift dataset (~25M rows), estimating heterogeneous treatment effects to inform budget-constrained marketing targeting decisions. Rather than predicting who is most likely to convert, this project identifies who is most likely to convert *because* of treatment, the "persuadables" segment that drives incremental value from a marketing intervention.
 
 Four causal inference approaches are implemented and rigorously compared on held-out test data: T-Learner, S-Learner, X-Learner, and Causal Forest.
 
@@ -51,7 +51,7 @@ All four models substantially outperform random targeting on the held-out test s
 uplift-modeling/
 
 ├── config/
-│   └── config.py              # Single source of truth for paths, hyperparameters, random_state
+│   └── config.py             
 ├── src/
 │   ├── data/
 │   │   ├── loader.py           # DataLoader, UpliftDataset
