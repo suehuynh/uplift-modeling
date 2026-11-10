@@ -41,13 +41,6 @@ class Evaluator:
     Usage
     -----
     >>> evaluator = Evaluator()
-    >>> result = evaluator.evaluate(
-    ...     model_name="T-Learner",
-    ...     y=test.outcome,
-    ...     treatment=test.treatment,
-    ...     tau_hat=model.predict_uplift(test.X),
-    ... )
-    >>> evaluator.plot_qini(results=[result_a, result_b, result_c])
     """
 
     def __init__(self, n_bins: int = 100) -> None:
